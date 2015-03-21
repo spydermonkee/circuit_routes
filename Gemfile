@@ -21,6 +21,7 @@ gem 'devise'
 gem 'pry', group: [:development, :test]
 gem 'pry-rails', group: [:development, :test]
 gem 'debugger', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
 
 group :test do
   # gem 'vcr'
