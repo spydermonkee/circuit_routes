@@ -13,6 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20150321200459) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "tablefunc"
+
   create_table "boulder_routes", force: true do |t|
     t.string   "route_setter"
     t.integer  "gym_id"
