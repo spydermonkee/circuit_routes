@@ -19,6 +19,13 @@ gem 'devise'
 gem 'pry', group: [:development, :test]
 gem 'pry-rails', group: [:development, :test]
 gem 'debugger', group: [:development, :test]
+gem "foreman"
+
+group :production, :staging do
+  gem "rails_12factor"
+  gem "rails_stdout_logging"
+  gem "rails_serve_static_assets"
+end
 
 group :test do
   gem 'factory_girl_rails'
