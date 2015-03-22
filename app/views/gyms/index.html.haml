@@ -1,0 +1,21 @@
+/ %h1 Gyms- Index
+
+/ .container
+/   %header.row
+/     %h1.col-sm-3 Find Route
+/     %form
+/       .form-group.col-sm-4
+/         %label{for: "boulderRouteSearch"}
+/         %input.form-control{ng_model: "boulderRouteSearch", placeholder: "Search for a route", type: "text", autofocus: "true"}
+/         %p {{boulderRouteSearch}}
+/     %a.btn.btn-success.col-sm-4.pull-right{ng_click: "search(boulderRouteSearch)", style: "margin-top: 20px"} S - E - A - R - C - H
+/   %hr
+/     %section.row{ng_if: "boulderRoutes"}
+/       %ul.list-unstyled
+/         %li{ng_repeat: "boulderRoute in boulderRoutes"}
+/           %section.well.col-sm-6
+/             %h1.h3.col-sm-6{:style => "margin-top: 0"}
+/               %a{href: "#"} Route, {{boulderRoute.date}}, {{boulderRoute.setter}}
+/             .col-sm-6
+/               %button.btn.btn-info Edit
+/               %button.btn.btn-danger Delete

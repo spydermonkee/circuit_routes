@@ -1,1 +1,0 @@
-circuit = angular.module('circuit', [])
