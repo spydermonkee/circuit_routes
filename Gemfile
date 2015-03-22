@@ -8,12 +8,10 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 gem "paperclip", "~> 4.2"
-gem 'angularjs-rails'
-gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'haml'
-gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'bower-rails'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
 # Use ActiveModel has_secure_password
@@ -23,16 +21,17 @@ gem 'pry-rails', group: [:development, :test]
 gem 'debugger', group: [:development, :test]
 
 group :test do
+  gem 'factory_girl_rails'
   # gem 'vcr'
   # gem 'webmock'
-  # gem 'capybara'
+  gem 'capybara'
   # gem 'poltergeist'
   # gem 'capybara-angular'
   # gem 'capybara-webkit', '1.2.0'
   # gem 'launchy'
   gem 'rspec-rails', '~> 2.14.1'
   gem 'shoulda-matchers', '~> 2.7.0', require: false
-  # gem 'selenium-webdriver', '~> 2.40.0'
+  gem 'selenium-webdriver', '~> 2.40.0'
 end
 
 group :development do
