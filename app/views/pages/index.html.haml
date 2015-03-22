@@ -1,4 +1,9 @@
-- content_for :bodyClass, "pages"
-
-.container
-  %h1 Here is where I want my one page app to go...
+%div{"ng-app" => "circuit"}
+  .container
+    .panel.panel-success
+      .panel-heading
+        %h1{ng_if: "name"} This is my view, {{name}}
+      .panel-body
+        %form.form-inline
+          .form-group
+            %input.form-control{type: "text", placeholder: "Enter your name:", ng_model: "name", autofocus: "true"}

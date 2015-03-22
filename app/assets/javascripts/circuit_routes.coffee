@@ -1,0 +1,1 @@
+circuit = angular.module('circuit', [])
