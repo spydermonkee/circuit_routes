@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#index'
 
-  resources :gyms
+  resources :boulder_routes, only: [:index]
+
+  # resources :gyms
+  # resources :walls
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

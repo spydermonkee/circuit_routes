@@ -1,6 +1,7 @@
 angular.module('CircuitRoutes',[
   'templates',
   'ngRoute',
+  'ngResource',
   'CircuitControllers',
 ])
 
@@ -13,7 +14,7 @@ angular.module('CircuitRoutes',[
       )
 ])
 
-routes = [
+boulderRoutes = [
   {
     id: 1
     setter: "Jonn"
@@ -22,7 +23,7 @@ routes = [
   {
     id: 2
     setter: "Jonn"
-    name: "Jonn's secodn route"
+    name: "Jonn's second route"
   },
   {
     id: 3
@@ -36,13 +37,17 @@ routes = [
   }
 ]
 angular.module('CircuitControllers',[])
-.controller("BoulderRoutesController", [ '$scope', '$routeParams', '$location',
-  ($scope,$routeParams,$location)->
+.controller("BoulderRoutesController", [ '$scope', '$routeParams', '$location', '$resource'
+  ($scope, $routeParams, $location, $resource) ->
     $scope.search = (keywords)->  $location.path("/").search('keywords',keywords)
 
     if $routeParams.keywords
       keywords = $routeParams.keywords.toLowerCase()
-      $scope.routes = routes.filter (route)-> route.name.toLowerCase().indexOf(keywords) != -1
+      $scope.boulderRoutes = boulderRoutes.filter (route)-> route.name.toLowerCase().indexOf(keywords) != -1
     else
-      $scope.routes = []
+      $scope.boulderRoutes = []
 ])
+.controller("BoulderRouteController", ['$scope', '$routeParams', '$resource',
+  ($scope, $routeParams, $resource) ->
+    BoulderRoute = $resource('/boulderRoutes/boulderRouteId', { boulderRouteId: "@id", format: 'json'})
+  ])

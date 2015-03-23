@@ -9,13 +9,13 @@
       .form-group.col-md-6
         %button.btn.btn-primary{ng_click: "search(keywords)"} Search
   %hr
-    %section.row{ng_if: "routes"}
+    %section.row{ng_if: "boulderRoutes"}
       %h1.text-center.h2 Results
       %ul.list-unstyled
-        %li{ng_repeat: "route in routes"}
+        %li{ng_repeat: "boulderRoute in boulderRoutes"}
           %section.well.col-md-6.col-md-offset-3
             %h1.h3.col-md-6.text-right{:style => "margin-top: 0"}
-              %a{:href => "#"} {{route.name}}
+              %a{:href => "#"} {{boulderRoute.name}}
             .col-md-6
               %button.btn.btn-info Edit
               %button.btn.btn-danger Delete
