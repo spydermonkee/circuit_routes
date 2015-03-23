@@ -5,8 +5,6 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
 gem "paperclip", "~> 4.2"
 gem 'font-awesome-rails'
 gem 'haml'
@@ -15,18 +13,13 @@ gem 'bower-rails'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
 gem 'angular-rails-templates'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem "foreman"
+
 gem 'pry', group: [:development, :test]
 gem 'pry-rails', group: [:development, :test]
 gem 'debugger', group: [:development, :test]
-gem "foreman"
-
-group :production, :staging do
-  gem "rails_12factor"
-  gem "rails_stdout_logging"
-  gem "rails_serve_static_assets"
-end
+gem 'teaspoon', group: [:development, :test]
+gem 'phantomjs', group: [:development, :test]
 
 group :test do
   gem 'factory_girl_rails'
@@ -37,14 +30,21 @@ group :test do
   # gem 'capybara-angular'
   # gem 'capybara-webkit', '1.2.0'
   # gem 'launchy'
-  gem 'rspec-rails', '~> 2.14.1'
+  gem 'rspec-rails', '~> 3.0'
   gem 'shoulda-matchers', '~> 2.7.0', require: false
   gem 'selenium-webdriver', '~> 2.40.0'
+  gem 'database_cleaner', '~> 1.4.1'
 end
 
 group :development do
   gem 'spring'
   # gem 'railroady'
   # gem 'coffee-rails-source-maps'
+end
+
+group :production, :staging do
+  gem "rails_12factor"
+  gem "rails_stdout_logging"
+  gem "rails_serve_static_assets"
 end
 

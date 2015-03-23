@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321200459) do
+ActiveRecord::Schema.define(version: 20150323010501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(version: 20150321200459) do
     t.integer  "wall_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "route_picture_file_name"
+    t.string   "route_picture_content_type"
+    t.integer  "route_picture_file_size"
+    t.datetime "route_picture_updated_at"
   end
 
   create_table "gyms", force: true do |t|

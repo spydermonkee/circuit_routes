@@ -22,7 +22,7 @@ routes = [
   {
     id: 2
     setter: "Jonn"
-    name: "Jonn's secodn route"
+    name: "Jonn's second route"
   },
   {
     id: 3

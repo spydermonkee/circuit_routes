@@ -7,11 +7,4 @@ class CreateBoulderRoutesTable < ActiveRecord::Migration
       t.timestamps
     end
   end
-  def self.up
-    add_attachment :boulder_routes, :route_picture
-  end
-
-  def self.down
-    remove_attachment :boulder_routes, :route_picture
-  end
 end
