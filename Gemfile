@@ -17,7 +17,7 @@ gem "foreman"
 
 gem 'pry', group: [:development, :test]
 gem 'pry-rails', group: [:development, :test]
-gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
 gem 'teaspoon', group: [:development, :test]
 gem 'phantomjs', group: [:development, :test]
 
