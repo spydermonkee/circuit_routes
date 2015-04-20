@@ -39,7 +39,6 @@ end
 group :development do
   gem 'spring'
   # gem 'railroady'
-  # gem 'coffee-rails-source-maps'
 end
 
 group :production, :staging do
